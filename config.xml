@@ -1,0 +1,91 @@
+<widget id="A6001793972063" version="0.0.1">
+
+	<name>DevApp</name>
+
+	<description>
+
+        用来调试和集成一些demo、
+
+	</description>
+
+	<author email="developer@apicloud.com" href="https://www.jiancang.co">
+
+        赵永亮
+
+	</author>
+
+	<content src="index.html" />
+
+	<access origin="*" />
+
+	<preference name="pageBounce" value="false"/>
+
+	<preference name="appBackground" value="rgba(0,0,0,0.0)"/>
+
+	<preference name="windowBackground" value="rgba(0,0,0,0.0)"/>
+
+	<preference name="frameBackgroundColor" value="rgba(0,0,0,0.0)"/>
+
+	<preference name="hScrollBarEnabled" value="false"/>
+
+	<preference name="vScrollBarEnabled" value="false"/>
+
+	<preference name="autoLaunch" value="false"/>
+
+	<preference name="fullScreen" value="false"/>
+
+	<preference name="autoUpdate" value="true" />
+
+	<preference name="smartUpdate" value="false" />
+
+	<preference name="debug" value="true"/>
+
+	<preference name="statusBarAppearance" value="true"/>
+
+	<permission name="readPhoneState" />
+
+	<permission name="camera" />
+
+	<permission name="record" />
+
+	<permission name="location" />
+
+	<permission name="fileSystem" />
+
+	<permission name="internet" />
+
+	<permission name="bootCompleted" />
+
+	<permission name="hardware" />
+
+	<feature name="UIScrollPicture"/>
+	<feature name="UIChatBox"/>
+	<feature name="UIInput"/>
+	<feature name="UIAlbumBrowser"/>
+	<feature name="imageFilter"/>
+	<feature name="fs"/>
+	<feature name="logger"/>
+	<feature name="UIButton"/>
+	<feature name="webBrowser"/>
+	<feature name="NVTabBar"/>
+	<feature name="UICoverFlow"/>
+	<feature name="MNActionButton"/>
+	<feature name="MNPopups"/>
+	<feature name="UISlider"/>
+	<feature name="dialogBox"/>
+	<feature name="UILoading"/>
+	<feature name="db"/>
+	<feature name="videoPlayer"/>
+	<feature name="agoraRtc"/>
+    <feature name="lBCast">
+        <!--Android平台的App key-->
+        <param name="androidAppId" value="11985" />
+        <!--Android平台的App Secret-->
+        <param name="androidSecret" value="7b8080a8580928b7b4985f18551c2eaa" />
+        <!--iOS平台的App Id-->
+        <param name="iosAppId" value="12075" />
+        <!--iOS平台的App Secret-->
+        <param name="iosSecret" value="17589ad690f44076a94dbe9b9171f845" />
+    </feature>
+</widget>
+
