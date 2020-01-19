@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Module Develop</title>
+    <meta charset="utf-8">
+    <meta name="viewport"
+        content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0" />
+    <style type="text/css">
+        html,
+        body {
+            height: 100%
+        }
+
+        body {
+            background-color: #fff;
+            margin: 0;
+        }
+
+        #wrap {
+            height: 100%;
+            position: relative;
+        }
+
+        #header {
+            background-color: #5082c2;
+            height: 44px;
+            position: relative;
+        }
+
+        #header h1 {
+            font-size: 20px;
+            height: 44px;
+            line-height: 44px;
+            margin: 0em;
+            color: #fff;
+            margin-left: 100px;
+            margin-right: 100px;
+            text-align: center;
+        }
+
+        #main {
+            display: block;
+        }
+
+        a.button {
+            display: -webkit-box;
+            -webkit-box-pack: center;
+            -webkit-box-align: center;
+            height: 36px;
+            margin: 8px;
+            background-color: rgba(240, 240, 240, 1.0);
+            border-color: rgba(220, 220, 220, 1.0);
+            border-width: 2px;
+            border-style: solid;
+        }
+
+        a.active {
+            background-color: rgba(240, 240, 240, 0.6);
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrap">
+        <header id="header">
+            <h1 id="title">模块开发</h1>
+        </header>
+        <div id="main">
+            <!-- <a class="button" tapmode="active" onclick="agoraRtc()">声网</a> -->
+            <a class="button" tapmode="active" onclick="LBCast()">LBCast</a>
+        </div>
+    </div>
+</body>
+<script>
+   
+    function apiready() {
+        var header = document.getElementById('header');
+        header.style.paddingTop = api.safeArea.top + 'px';
+
+        api.removeLaunchView();
+    }
+
+    //乐播投屏
+    function LBCast() {
+        api.openWin({
+            name: 'LBCast_win',
+            url: 'widget://html/comm_win.html',
+            bounces: false,
+            pageParam: {
+                title: '乐播投屏',
+                name: 'LBCast_frm',
+                url: 'widget://html/LBCast/default.html'
+            }
+        });
+    }
+
+    function agoraRtc() {
+        api.setKeepScreenOn({
+            keepOn: true
+        });
+        api.openWin({
+            name: 'agoraRtc',
+            url: 'widget://html/agora/default.html',
+            bounces: false,
+            slidBackEnabled: false,
+            rect: {
+                x: 0,
+                y: 0,
+                w: api.winWidth,
+                h: api.winHeight
+            },
+            animation: {
+                type: "push", //动画类型（详见动画类型常量）
+                subType: "from_bottom", //动画子类型（详见动画子类型常量）
+                duration: 300 //动画过渡时间，默认300毫秒
+            }
+        });
+    }
+
+</script>
+
+</html>
